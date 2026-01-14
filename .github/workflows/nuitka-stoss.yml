@@ -24,7 +24,7 @@ jobs:
         run: |
            pip install -r requirements.txt
 
-      - name: Build Executable with Nuitka
+      - name: Build Executable with Nuitka for GUI with PySide6
         uses: Nuitka/Nuitka-Action@main
         with:
            nuitka-version: main
@@ -33,6 +33,7 @@ jobs:
            # to use nuitka-project: options in your code, so e.g. you can make
            # a difference for macOS and create an app bundle there.
            mode: app
+           enable-plugins: pyside6
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
