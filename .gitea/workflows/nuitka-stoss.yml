@@ -38,7 +38,7 @@ jobs:
            enable-plugins: tk-inter
 
       - name: Upload Artifacts
-        uses: https://gitea.com/actions/gitea-upload-artifact
+        uses: https://gitea.com/actions/gitea-upload-artifact@v4
         with:
            name: ${{ runner.os }} Build
            path: | # match what's created for the 3 OSes
